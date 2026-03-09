@@ -1,0 +1,74 @@
+/* Navbar.css */
+
+.navbar {
+    background: linear-gradient(135deg, #0f0c29, #302b63, #ff0080);
+    /* Black → Purple → Pink */
+    padding: 0.8rem 1rem;
+    position: relative;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+    /* Transparent background effect */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent overlay */
+}
+
+.navbar .navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.navbar .navbar-brand::first-letter {
+    color: #e808c6;
+    /* Optional special color for first letter */
+}
+
+/* Different colors for "Flower" and "Shop" */
+.navbar .navbar-brand span.flower {
+    color: #ff69b4;
+    /* Pink */
+}
+
+.navbar .navbar-brand span.shop {
+    color: #8a2be2;
+    /* Purple */
+}
+
+.navbar .nav-link {
+    color: #ffffff;
+    /* White text */
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: #ff69b4;
+    /* Pink hover */
+}
+
+.navbar .btn-outline-success {
+    border-color: #ff69b4;
+    color: #ff69b4;
+    transition: all 0.3s ease;
+}
+
+.navbar .btn-outline-success:hover {
+    background-color: #ff69b4;
+    color: #fff;
+    border-color: #ff69b4;
+}
+
+.navbar-toggler {
+    border-color: #ff69b4;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+    /* Makes the toggler icon white */
+}
+
+.active-link {
+    color: #ff69b4 !important;
+    font-weight: 600;
+    border-bottom: 2px solid #ff69b4;
+    /* optional underline */
+}

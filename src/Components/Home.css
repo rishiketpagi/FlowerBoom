@@ -1,0 +1,231 @@
+/* 🌸 General Page Styles */
+.home-container {
+    font-family: "Poppins", sans-serif;
+    color: #333;
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+/* 🌼 Hero Section */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background: linear-gradient(135deg, #ffb6c1, #ff69b4, #c71585);
+    color: white;
+    padding: 80px 8%;
+    min-height: 90vh;
+}
+
+.hero-content {
+    max-width: 550px;
+}
+
+.hero-content h1 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-content h1 span {
+    color: #ffe4f3;
+}
+
+.hero-content p {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.explore-btn,
+.learn-btn {
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.explore-btn {
+    background: white;
+    color: #c71585;
+}
+
+.explore-btn:hover {
+    background: #f7f7f7;
+    transform: translateY(-3px);
+}
+
+.learn-btn {
+    border: 2px solid white;
+    color: white;
+}
+
+.learn-btn:hover {
+    background: white;
+    color: #c71585;
+    transform: translateY(-3px);
+}
+
+.hero-image {
+    width: 400px;
+    height: 400px;
+    background: url("https://png.pngtree.com/png-clipart/20231004/original/pngtree-beautiful-bouquet-of-flowers-clipart-transparent-background-png-image_13189035.png") no-repeat center/contain;
+    animation: float 3.5s ease-in-out infinite alternate;
+}
+
+@keyframes float {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-15px);
+    }
+}
+
+/* 🌷 Features Section */
+.features {
+    text-align: center;
+    padding: 80px 8%;
+    background-color: #fff8fc;
+}
+
+.features h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #c71585;
+}
+
+.features h2 span {
+    color: #ff69b4;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+}
+
+.feature-card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    color: #c71585;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* 🌻 Testimonials */
+.testimonials {
+    background: linear-gradient(135deg, #fff0f6, #ffe4f3);
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 2.5rem;
+    color: #c71585;
+    margin-bottom: 50px;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.testimonial {
+    background: white;
+    padding: 25px 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.testimonial:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial p {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.testimonial span {
+    font-weight: 600;
+    color: #c71585;
+}
+
+/* 🌸 Footer */
+.footer {
+    text-align: center;
+    background: #c71585;
+    color: white;
+    padding: 25px 0;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
+
+/* 📱 Responsive Adjustments */
+@media (max-width: 900px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2.3rem;
+    }
+
+    .hero-image {
+        width: 300px;
+        height: 300px;
+        margin-top: 30px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 500px) {
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .features h2,
+    .testimonials h2 {
+        font-size: 2rem;
+    }
+}
