@@ -1,74 +1,129 @@
-/* Navbar.css */
-
+/* Navbar Container */
 .navbar {
     background: linear-gradient(135deg, #0f0c29, #302b63, #ff0080);
-    /* Black → Purple → Pink */
-    padding: 0.8rem 1rem;
-    position: relative;
-    z-index: 10;
+    padding: 12px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
     backdrop-filter: blur(10px);
-    /* Transparent background effect */
     background-color: rgba(0, 0, 0, 0.5);
-    /* Semi-transparent overlay */
 }
 
-.navbar .navbar-brand {
+/* Logo */
+.navbar-logo {
     font-size: 1.8rem;
     font-weight: bold;
+    text-decoration: none;
 }
 
-.navbar .navbar-brand::first-letter {
-    color: #e808c6;
-    /* Optional special color for first letter */
-}
-
-/* Different colors for "Flower" and "Shop" */
-.navbar .navbar-brand span.flower {
+/* Flower text */
+.navbar-logo .flower {
     color: #ff69b4;
-    /* Pink */
 }
 
-.navbar .navbar-brand span.shop {
+/* Boom text */
+.navbar-logo .shop {
     color: #8a2be2;
-    /* Purple */
 }
 
-.navbar .nav-link {
-    color: #ffffff;
-    /* White text */
+/* Nav Links Container */
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+/* Individual Links */
+.nav-link {
+    color: white;
+    text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.navbar .nav-link:hover {
-    color: #ff69b4;
-    /* Pink hover */
-}
-
-.navbar .btn-outline-success {
-    border-color: #ff69b4;
-    color: #ff69b4;
     transition: all 0.3s ease;
 }
 
-.navbar .btn-outline-success:hover {
-    background-color: #ff69b4;
-    color: #fff;
-    border-color: #ff69b4;
+/* Hover Effect */
+.nav-link:hover {
+    color: #ff69b4;
 }
 
-.navbar-toggler {
-    border-color: #ff69b4;
-}
-
-.navbar-toggler-icon {
-    filter: invert(1);
-    /* Makes the toggler icon white */
-}
-
+/* Active Link */
 .active-link {
-    color: #ff69b4 !important;
+    color: #ff69b4;
     font-weight: 600;
     border-bottom: 2px solid #ff69b4;
-    /* optional underline */
+}
+
+/* Search Section */
+.search-box {
+    display: flex;
+    gap: 8px;
+}
+
+.search-input {
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+}
+
+.search-btn {
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 2px solid #ff69b4;
+    background: transparent;
+    color: #ff69b4;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.search-btn:hover {
+    background: #ff69b4;
+    color: white;
+}
+
+/* Mobile Menu Button */
+.menu-btn {
+    display: none;
+    font-size: 24px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #1a1a2e;
+
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+        padding: 20px 0;
+
+        display: none;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .search-box {
+        display: none;
+    }
+
 }

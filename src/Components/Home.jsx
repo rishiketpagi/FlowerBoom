@@ -1,10 +1,10 @@
 import React from "react";
 import "./Home.css";
 import { Link } from "react-router-dom";
-
 const Home = () => {
     return (
         <div className="home-container">
+ 
             {/* Hero Section */}
             <section className="hero-section">
                 <div className="hero-content">

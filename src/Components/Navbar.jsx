@@ -1,54 +1,31 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './Navbar.css';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import "./Navbar.css";
 const Navbar = () => {
+    const [open, setOpen] = useState(false);
+
     return (
-        <nav className="navbar navbar-expand-lg bg-body-tertiary">
-            <div className="container-fluid">
-                <Link className="navbar-brand" to="/">
-                    <span className="flower">Flower</span> <span className="shop">Boom</span>
-                </Link>
+        <nav className="navbar">
 
-                <button
-                    className="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <span className="navbar-toggler-icon"></span>
-                </button>
+            <Link to="/" className="navbar-logo">
+                <span className="flower">Flower</span>
+                <span className="shop">Boom</span>
+            </Link>
 
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li className="nav-item">
-                            <Link className="nav-link active" to="/home">Home</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/gallery">Gallery</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/about">About</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/contact">Contact</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/signin">SignIn</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/signup">Signup</Link>
-                        </li>
-                    </ul>
+            <ul className="nav-links">
+                <Link to="/" className="nav-link">Home</Link>
+                <Link to="/gallery" className="nav-link">Gallery</Link>
+                <Link to="/about" className="nav-link">About</Link>
+                <Link to="/contact" className="nav-link">Contact</Link>
+                <Link to="/signin" className="nav-link">Sign In</Link>
+                <Link to="/signup" className="nav-link">Sign Up</Link>
+            </ul>
 
-                    <form className="d-flex" role="search">
-                        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                        <button className="btn btn-outline-success" type="submit">Search</button>
-                    </form>
-                </div>
+            <div className="search-box">
+                <input className="search-input" placeholder="Search" />
+                <button className="search-btn">Search</button>
             </div>
+
         </nav>
     );
 };

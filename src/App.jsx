@@ -14,7 +14,6 @@ const App = () => {
       <Navbar />
       <Routes>
         {/* <Routepath path="/" element={<Navigate to="/home" />} /> */}
-
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/signin" element={<SignIn />} />
@@ -26,5 +25,4 @@ const App = () => {
     </BrowserRouter>
   );
 };
-
 export default App;
